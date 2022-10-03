@@ -1,0 +1,254 @@
+#data {
+    position: absolute;
+    z-index: -2;
+    top: var(--data-position);
+    min-height: 900px;
+    width: 100%;
+    transition: top 2s ease-out;
+    background-color: var(--main-black);
+}
+
+#data-wrapper {
+    min-height: 900px;
+    background-color: var(--main-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blue-team-wrapper {
+    width: 950px;
+    min-height: 350px;
+    background-color: rgba(0,0,0, 0.05);
+    box-shadow: 0 0 10px rgba(0,0,0, 0.4);
+}
+
+#blue-team-wrapper:hover {
+    box-shadow: 0 0 10px rgba(0,0,0, 0.6);
+  }
+
+.team-titles-wrapper {
+    margin-left: 14px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.team-titles-wrapper > p {
+    display: inline;
+}
+
+.team-result {
+    font-size: 28px;
+    color: var(--title-text-color);
+    margin-left: 5px;
+}
+
+#blue-team-color {
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--main-blue)
+}
+
+#red-team-wrapper {
+    width: 950px;
+    min-height: 350px;
+    margin-top: 50px;
+    background-color: rgba(0,0,0, 0.05);
+    box-shadow: 0 0 10px rgba(0,0,0, 0.4);
+}
+
+#red-team-wrapper:hover {
+    box-shadow: 0 0 10px rgba(0,0,0, 0.6);
+  }
+
+#red-team-color {
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--main-red)
+}
+
+.player-wrapper {
+    height: 55px;
+    width: 97%;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 5px auto;
+}
+
+.blue {
+    background-color:var(--main-blue);
+}
+
+.red {
+    background-color: var(--main-red);
+}
+
+.player-wrapper > img {
+    margin-left: 8px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.playername-wrapper > a {
+    text-decoration: none;
+    position:relative;
+    color: var(--title-text-color);
+    opacity: .85;
+    font-weight: 400;
+}
+
+.playername-wrapper > a:hover {
+    opacity: 1;
+}
+
+.playername-wrapper > a::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: -4px;
+    background: var(--title-text-color);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.playername-wrapper > a:hover::after {
+    width: 100%;
+}
+
+.playername-wrapper {
+    width: 160px;
+    margin-left: 10px;
+}
+
+.player-kda-wrapper {
+    width: 75px;
+}
+
+.player-kda-ratio {
+    font-size: 14px;
+}
+
+.blueTeamChamp {
+    outline: 3.5px solid var(--main-blue);
+    outline-offset: -2.5px;
+    border-radius: 20px;
+}
+
+.redTeamChamp {
+    outline: 3.5px solid var(--main-red);
+    outline-offset: -2.5px;
+    border-radius: 20px;
+}
+
+.runes-wrapper {
+    height: 43px;
+    width: 25px;
+    position: relative;
+}
+
+.player-keystone {
+    width: 25px;
+    filter: drop-shadow(0 0 4px var(--main-black));
+}
+
+.player-secondary-rune {
+    width: 17px;
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    filter: drop-shadow(0 0 4px var(--main-black));
+}
+
+.player-misc-wrapper {
+    width: 100px;
+    font-size: 14px;
+}
+
+.player-item-wrapper {
+    width: 300px;
+    display: flex;
+}
+
+.player-item-slot-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.2);
+    margin-left: 4px;
+    border-radius: 4px;
+}
+
+.player-item-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+}
+
+.tags-wrapper {
+    margin-left: 10px;
+    width: 140px;
+    display: flex;
+}
+
+.mutedall-tag {
+    width: 92px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.2);
+    border-radius: 4px;
+}
+
+.wasafk-tag {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.2);
+    border-radius: 4px;
+    margin-left: 6px;
+    font-weight: 400;
+}
+
+.player-collapse-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-left: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-collapse-button {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.2);
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.player-collapse-button:hover {
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.player-collapse-button > span {
+    transition: all .5s ease-out;
+}
+
+.player-collapse-button:hover > span {
+    transform:translateY(3px);
+}
