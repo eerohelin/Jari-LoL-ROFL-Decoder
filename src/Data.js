@@ -87,7 +87,7 @@ function Player(props) {
     }
 
     return (
-        <div className={classes}>
+        <div className={classes} key={playerName}>
             <img src={championIcon} alt="" className={imgClass}/>
             <div className="runes-wrapper"><img src={runesDict[keystoneID]} alt="" className="player-keystone"/><img src={runesDict[props.playerData["PERK_SUB_STYLE"]]} alt="" className="player-secondary-rune"/></div>
             <div className="playername-wrapper"><a href={opgglink} target="_blank">{playerName}</a></div>
@@ -125,7 +125,7 @@ function Player(props) {
             
             <div className="player-collapse-wrapper">
                 <button className="player-collapse-button">
-                    <span class="material-symbols-outlined player-collapse-arrow">
+                    <span className="material-symbols-outlined player-collapse-arrow">
                     expand_more
                     </span>
                 </button>
